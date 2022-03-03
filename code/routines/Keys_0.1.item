@@ -1,0 +1,240 @@
+// template routine Java
+package routines;
+
+/*
+ * user specification: the function's comment should contain keys as follows: 1. write about the function's comment.but
+ * it must be before the "{talendTypes}" key.
+ * 
+ * 2. {talendTypes} 's value must be talend Type, it is required . its value should be one of: String, char | Character,
+ * long | Long, int | Integer, boolean | Boolean, byte | Byte, Date, double | Double, float | Float, Object, short |
+ * Short
+ * 
+ * 3. {Category} define a category for the Function. it is required. its value is user-defined .
+ * 
+ * 4. {param} 's format is: {param} <type>[(<default value or closed list values>)] <name>[ : <comment>]
+ * 
+ * <type> 's value should be one of: string, int, list, double, object, boolean, long, char, date. <name>'s value is the
+ * Function's parameter name. the {param} is optional. so if you the Function without the parameters. the {param} don't
+ * added. you can have many parameters for the Function.
+ * 
+ * 5. {example} gives a example for the Function. it is optional.
+ */
+public class Keys {
+
+		 public static String key_individus(String Nom, String Prenom, String DateNaiss) {
+			 // Cas des indiens sans nom	
+			 if ((Nom == null) || (Nom.trim().equalsIgnoreCase("")))
+		    	Nom = "NONAME";    	
+		    	 	    		
+			Nom = Nom.trim();//.replaceAll(" ", "");
+			//Nom = Utilitaires.removeAccents(Nom);
+			if ((Prenom == null) || (Prenom.trim().equalsIgnoreCase("")))
+				if (DateNaiss == null || (DateNaiss.trim().equalsIgnoreCase("")))
+					return Nom.toUpperCase();
+				else
+					return Nom.toUpperCase() + "_" + DateNaiss;
+			else
+			{
+				Prenom = Prenom.trim();//.replaceAll(" ", "");
+				// Lorsque l on enlève les accents, on peut se retrouver avec des prénoms à orthographe différente
+				// avec accent mais pas sans genre JOEL avec ^ ou ¨
+				//Prenom = Utilitaires.removeAccents(Prenom);
+				if (DateNaiss == null || (DateNaiss.trim().equalsIgnoreCase("")))
+					return Nom.toUpperCase() + "_" + Prenom.toUpperCase();
+				else
+					return Nom.toUpperCase() + "_" + Prenom.toUpperCase() + "_" + DateNaiss;
+			}
+	    }
+	    
+	    public static String key_CP(String CP, String Lib) 
+	    {
+	    	if ((CP != null) && (!CP.trim().equalsIgnoreCase("")) 
+	    			&& (Lib != null) && (!Lib.trim().equalsIgnoreCase("")))	    		
+	    		return Utilitaires.Clean_Code(CP) + "_" + Utilitaires.Clean_Code(Lib);
+	    	else
+	    		return null;    	
+	    }
+	    
+	    public static String Key_Objets(String Val) 
+	    {
+	       	if ((Val == null) || (Val.equalsIgnoreCase("")))
+	    		return null;
+	       	else       
+	       		return Val;		
+	    }
+	    
+	    //Clés principales des Interfaces Neoma
+	    //Clés utilisées pour les imports des Concours
+	    public static String Key_Candidat(String GrpADM, String numCandidature, String Nom, String Prenom, String DateNaiss)
+	    {
+	    	if ((GrpADM == null) || (GrpADM.trim().equalsIgnoreCase("")))
+	    		return null;
+	    	
+	    	if ((numCandidature == null) || (numCandidature.trim().equalsIgnoreCase("")))
+		    		return null;
+	    	
+	    	String key = key_individus(Nom, Prenom, DateNaiss);
+	    	if(key==null) return null; 
+	    	
+	    	return GrpADM + "_" + numCandidature.trim() + "_" + key;
+	    }
+	    //Clé utilisée pour l'import d'apprenant via un fichier simple
+	    public static String Key_Import_Apprenant(String groupeADM, String Nom, String Prenom, String DateNaiss)
+	    {
+	    	if ((groupeADM == null) || (groupeADM.trim().equalsIgnoreCase("")))
+	    		return null;
+	    	
+	    	String key = key_individus(Nom, Prenom, DateNaiss);
+	    	if(key==null) return null; 
+	    	
+	    	return groupeADM.trim() + "_" + key;
+	    }
+	    public static String Key_Import_Apprenant_prefix(String Prefixe, String groupeADM, String Nom, String Prenom, String DateNaiss)
+	    {
+	    	if ((groupeADM == null) || (groupeADM.trim().equalsIgnoreCase("")))
+	    		return null;
+	    	
+	    	String key = key_individus(Nom, Prenom, DateNaiss);
+	    	if(key==null) return null; 
+	    	
+	    	return Prefixe + "_" + groupeADM.trim() + "_" + key;
+	    }
+	    
+
+	    
+	    
+	    public static String Key_Apprenant(String keyIndividu)
+	    {
+	    	if(keyIndividu == null) return null;
+	    	return keyIndividu +"_APPRENANT";
+	    }
+	    
+	    
+	    
+	    //Clés Informations individu
+	    public static String Key_Titre(String keyIndividu)
+	    {
+	    	if(keyIndividu == null) return null;
+	    	return keyIndividu +"_TITRE";
+	    }
+	    public static String Key_Nationalite(String keyIndividu, String idNationalite)
+	    {
+	    	if(keyIndividu == null || idNationalite == null) return null;
+	    	return keyIndividu +"_NATIONALITE_"+idNationalite;
+	    }
+	    public static String Key_Naissance_Pays(String keyIndividu, String idPays)
+	    {
+	    	if((keyIndividu == null) || (idPays == null)) return null;
+	    	return keyIndividu + "_NAISSANCE_PAYS_"+idPays;
+	    }
+	    public static String Key_Naissance_Ville(String keyIndividu, String idVille)
+	    {
+	    	if((keyIndividu == null) || (idVille == null)) return null;
+	    	return keyIndividu + "_NAISSANCE_VILLE_"+idVille;
+	    }
+	    
+	    
+	    
+	    //Clés Coordonnée d'un individu
+	    public static String Key_ADR_PERSO(String keyIndividu)
+	    {
+	    	if(keyIndividu == null) return null;
+	    	return keyIndividu +"_ADR_PERSO";
+	    }
+	    public static String Key_Adresse_Pays(String keyIndividu, String idPays)
+	    {
+	    	if((keyIndividu == null) || (idPays == null)) return null;
+	    	return keyIndividu + "_ADR_PAYS_"+idPays;
+	    }
+	    public static String Key_Adresse_Ville(String keyIndividu, String idVille)
+	    {
+	    	if((keyIndividu == null) || (idVille == null)) return null;
+	    	return keyIndividu + "_ADR_VILLE_"+idVille;
+	    }
+	    
+	    public static String Key_TEL_PERSO(String keyIndividu, String numTel)
+	    {
+	    	if((keyIndividu == null) || (numTel == null) || (numTel.trim().equalsIgnoreCase(""))) return null;
+	    	return keyIndividu + "_TEL_PERSO";
+	    }
+	    public static String Key_PORTABLE_PERSO(String keyIndividu, String numTel)
+	    {
+	    	if((keyIndividu == null) || (numTel == null) || (numTel.trim().equalsIgnoreCase(""))) return null;
+	    	return keyIndividu + "_PORTABLE_PERSO";
+	    }
+	    public static String Key_EMAIL_PERSO(String keyIndividu, String mail)
+	    {
+	    	if((keyIndividu == null) || (mail == null) || (mail.trim().equalsIgnoreCase(""))) return null;
+	    	return keyIndividu + "_EMAIL_PERSO";
+	    }
+	    
+	    
+	    //Clés Type Coordonnée d'un individu
+	    public static String Key_ADR_PERSO_TYPE(String keyIndividu)
+	    {
+	    	if(keyIndividu == null) return null;
+	    	return keyIndividu +"_TYPE";
+	    }
+	    public static String Key_TEL_PERSO_TYPE(String keyIndividu)
+	    {
+	    	if((keyIndividu == null)) return null;
+	    	return keyIndividu + "_TYPE";
+	    }
+	    public static String Key_PORTABLE_PERSO_TYPE(String keyIndividu)
+	    {
+	    	if((keyIndividu == null)) return null;
+	    	return keyIndividu + "_TYPE";
+	    }
+	    public static String Key_EMAIL_PERSO_TYPE(String keyIndividu)
+	    {
+	    	if((keyIndividu == null)) return null;
+	    	return keyIndividu + "_TYPE";
+	    }
+	    
+	    //Clés Inscription groupe (inscription_programme)
+	    public static String Key_Inscription_Groupe(String keyIndividu, String idGroupe)
+	    {
+	    	if((keyIndividu == null) || (idGroupe == null) || (idGroupe == "") || (idGroupe == "0")) return null;
+	    	return keyIndividu + "_INSC_" + idGroupe;
+	    }
+	    public static String Key_Inscription_Groupe_Code(String keyIndividu, String codeGroupe)
+	    {
+	    	if((keyIndividu == null) || (codeGroupe == null)) return null;
+	    	return keyIndividu + "_INSC_" + codeGroupe;
+	    }
+	    public static String Key_Inscription_Groupe_GRP(String keyInscriptionGroupe)
+	    {
+	    	if((keyInscriptionGroupe == null)) return null;
+	    	return keyInscriptionGroupe + "_GRP";
+	    }
+	    public static String Key_Inscription_Groupe_Statut(String keyInscriptionGroupe)
+	    {
+	    	if((keyInscriptionGroupe == null)) return null;
+	    	return keyInscriptionGroupe + "_STATUT";
+	    }
+
+	    
+	    //Clés groupe (double de inscription_programme)
+	    public static String Key_Groupe(String keyIndividu, String idGroupe)
+	    {
+	    	if((keyIndividu == null) || (idGroupe == null)) return null;
+	    	return keyIndividu + "_GRP_" + idGroupe;
+	    }
+	    public static String Key_Groupe_Code(String keyIndividu, String codeGroupe)
+	    {
+	    	if((keyIndividu == null) || (codeGroupe == null)) return null;
+	    	return keyIndividu + "_GRP_" + codeGroupe;
+	    }
+	    public static String Key_Groupe_GRP(String keyInscriptionGroupe)
+	    {
+	    	if((keyInscriptionGroupe == null)) return null;
+	    	return keyInscriptionGroupe + "_GRP";
+	    }
+	    public static String Key_Groupe_Statut(String keyInscriptionGroupe)
+	    {
+	    	if((keyInscriptionGroupe == null)) return null;
+	    	return keyInscriptionGroupe + "_STATUT";
+	    }
+	    
+	    
+}

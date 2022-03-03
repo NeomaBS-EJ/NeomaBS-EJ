@@ -1,0 +1,238 @@
+// template routine Java
+package routines;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+
+import com.sun.org.apache.xml.internal.security.utils.Base64;
+
+public class ConvertUtils {
+
+    public static Boolean ONtoTrueFalse(String code) {
+    	if ((code == null) || (code.trim().equalsIgnoreCase(""))
+    		 || (code.toUpperCase().equalsIgnoreCase("N")) || (code.toUpperCase().equalsIgnoreCase("F"))
+    			|| (code.toUpperCase().equalsIgnoreCase("FAUX")) || (code.toUpperCase().equalsIgnoreCase("FALSE")) 
+    			|| (code.toUpperCase().equalsIgnoreCase("NON")) )
+    		return false;
+    	else
+    	{
+        	return true;
+     	}
+    }
+    
+    public static String concatorgetnull(String code, String libelle) {
+    	if ((code == null) || (code.equalsIgnoreCase("")))
+    		return null;
+    	else{
+    		code = code.trim();
+    		if((libelle != null) && !(libelle.equalsIgnoreCase("")))
+    		{
+    			libelle = libelle.trim();
+    			return code + libelle;
+    		}
+    		else
+    			return code;
+    	}	    	
+    }
+    
+    public static String concatorgetnullWith_(String code, String libelle) {
+    	if ((code == null) || (code.equalsIgnoreCase("")))
+    		return null;
+    	else{
+    		code = code.trim();
+    		if((libelle != null) && !(libelle.equalsIgnoreCase("")))
+    		{
+    			libelle = libelle.trim();
+    			return code + "_" + libelle;
+    		}
+    		else
+    			return code;
+    	}	    	
+    }    
+
+    public static String concatorgetnullWithSpace(String code, String libelle) {
+    	if ((code == null) || (code.equalsIgnoreCase("")))
+    		return null;
+    	else{
+    		code = code.trim();
+    		if((libelle != null) && !(libelle.equalsIgnoreCase("")))
+    		{
+    			libelle = libelle.trim();
+    			return code + " " + libelle;
+    		}
+    		else
+    			return code;
+    	}	    	
+    }    
+    
+    public static String concatorgetnullPrenoms(String code, String libelle) {
+    	if ((code == null) || (code.equalsIgnoreCase("")))
+    		return null;
+    	else{
+    		code = code.trim();
+    		if((libelle != null) && !(libelle.equalsIgnoreCase("")))
+    		{
+    			libelle = libelle.trim();
+    			return code + ", " + libelle;
+    		}
+    		else
+    			return code;
+    	}	    	
+    } 
+    
+    public static Boolean XtoBoolean(String X) {
+    	if ((X == null) || (!X.equalsIgnoreCase("X")))
+    		return null;
+    	else
+    		return true;
+    }
+    
+    public static Boolean getFalse() {
+    	return false;
+    }
+    
+    public static Boolean getTrue() {
+    	return false;
+    }
+    
+    public static String getUpperStringNoSpaceNoTiret(String code) {
+    	if ((code == null) || (code.equalsIgnoreCase("")))
+    		return null;
+    	else
+    	{
+    		return code.trim().toUpperCase().replace(" ","").replace("-", "");		
+    	}
+    }
+    public static String getUpperStringReplaceSpaceBy_NoTiret(String code) {
+    	if ((code == null) || (code.equalsIgnoreCase("")))
+    		return null;
+    	else
+    	{
+    		return code.trim().toUpperCase().replace(" ","_").replace("-", "");	
+    	}
+    }
+    
+    public static String Virgule_TO_Point(String Val) {
+        if ((Val == null) || (Val.equalsIgnoreCase("")))
+            return null;       
+        else
+            return Val.replace(",", ".").trim();
+    }    
+    
+    public static String fullDateToStandardData(String Val) {
+        if ((Val == null) || (Val.equalsIgnoreCase("")))
+            return null;       
+        else
+        {
+        	return Val.substring(6, 7) + "-" + Val.substring(4, 5) + Val.substring(0, 3);  
+        }
+        	
+    } 
+
+    public static boolean MessageIsNull(String Val) {
+        if ((Val == null) || (Val.equalsIgnoreCase("")
+        		||("".equals(Val))))
+            return true;       
+        else
+        	return false;  
+        	
+    } 
+    
+    public static String removeAccents(String input) {
+        return input
+		.replaceAll("À", "A")
+        .replaceAll("Á", "A")
+        .replaceAll("Â", "A")
+        .replaceAll("Ã", "A")
+        .replaceAll("Ä", "A")
+        .replaceAll("Å", "A")
+        .replaceAll("Æ", "AE")
+        .replaceAll("à", "a")
+        .replaceAll("á", "a")
+        .replaceAll("â", "a")
+        .replaceAll("ã", "a")
+        .replaceAll("ä", "a")
+        .replaceAll("å", "a")
+        .replaceAll("æ", "ae")
+        .replaceAll("Ç", "C")
+        .replaceAll("ç", "c")
+        .replaceAll("Ð", "D")
+        .replaceAll("ð", "d")
+        .replaceAll("È", "E")
+        .replaceAll("É", "E")
+        .replaceAll("Ê", "E")
+        .replaceAll("Ë", "E")
+        .replaceAll("è", "e")
+        .replaceAll("é", "e")
+        .replaceAll("ê", "e")
+        .replaceAll("ë", "e")
+        .replaceAll("Ì", "I")
+        .replaceAll("Í", "I")
+        .replaceAll("Î", "I")
+        .replaceAll("Ï", "I")
+        .replaceAll("ì", "i")
+        .replaceAll("í", "i")
+        .replaceAll("î", "i")
+        .replaceAll("ï", "i")
+        .replaceAll("Ñ", "N")
+        .replaceAll("ñ", "n")
+        .replaceAll("Ò", "O")
+        .replaceAll("Ó", "O")
+        .replaceAll("Ô", "O")
+        .replaceAll("Õ", "O")
+        .replaceAll("Ö", "O")
+        .replaceAll("Ø", "O")
+        .replaceAll("Œ", "OE")
+        .replaceAll("ò", "o")
+        .replaceAll("ó", "o")
+        .replaceAll("ô", "o")
+        .replaceAll("õ", "o")
+        .replaceAll("ö", "o")
+        .replaceAll("ø", "o")
+        .replaceAll("œ", "oe")
+        .replaceAll("Š", "S")
+        .replaceAll("š", "s")
+        .replaceAll("Ù", "U")
+        .replaceAll("Ú", "U")
+        .replaceAll("Û", "U")
+        .replaceAll("Ü", "U")
+        .replaceAll("ù", "u")
+        .replaceAll("ú", "u")
+        .replaceAll("û", "u")
+        .replaceAll("ü", "u")
+        .replaceAll("Ý", "Y")
+        .replaceAll("Ÿ", "Y")
+        .replaceAll("ý", "y")
+        .replaceAll("ÿ", "y")
+        .replaceAll("Ž", "Z")
+        .replaceAll("ž", "z");
+      }
+    
+    public static String Trim_Value(String Val) {
+       	if ((Val == null) || (Val.equalsIgnoreCase("")))
+    		return null;
+       	else       		    		      
+       		return Val.trim();
+    }
+
+    public static String convertImageBase64(String image) throws IOException {
+		if (image == null || image.equalsIgnoreCase(""))
+			return null;
+	   	else   		
+	   	{  		
+	   	    try {
+	   			java.io.File file = new java.io.File(image);
+	   			FileInputStream is = new java.io.FileInputStream(file);
+		   	    java.io.BufferedInputStream bis = new java.io.BufferedInputStream(is);
+		   	    int bytes = (int) file.length();
+		   	    byte[] buffer = new byte[bytes];
+		   	    bis.read(buffer);
+		   	    bis.close();	   	    
+		   	    return Base64.encode(buffer);
+			} catch (Exception e) {
+				return null;
+			}	   			   	}	
+       
+ }
+    
+}

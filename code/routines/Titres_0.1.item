@@ -1,0 +1,105 @@
+// template routine Java
+package routines;
+
+public class Titres {
+
+	  public static String title_code_to_label(String code) {
+	    	if ((code == null) || (code.equalsIgnoreCase("")))
+	    		return null;
+	    	else
+	    	{
+	        	code = code.trim();
+	        	if (code.equalsIgnoreCase("M.") || (code.equalsIgnoreCase("MR")) || (code.equalsIgnoreCase("M"))	        			)
+	                return "Monsieur";
+	            else
+	            if (code.equalsIgnoreCase("MME") || code.equalsIgnoreCase("ME")
+	            		|| code.equalsIgnoreCase("MLLE") || code.equalsIgnoreCase("ML") 
+	            		|| code.equalsIgnoreCase("MLL") || code.equalsIgnoreCase("MLE")
+	            		|| code.equalsIgnoreCase("MS")|| code.equalsIgnoreCase("MISS")
+	            		|| (code.equalsIgnoreCase("MRS")))
+	            	return "Madame";
+	            else
+	                if (code.equalsIgnoreCase("ND"))
+	                	return "Non disponible";        	
+	     	}
+	    	return null;
+	    }
+	    
+	    public static String title_label_to_code(String code) {
+	    	if ((code == null) || (code.equalsIgnoreCase("")))
+	    		return null;
+	    	else
+	    	{
+	        	code = code.trim();
+	        	if (code.equalsIgnoreCase("Monsieur"))
+	                return "MR";
+	            else
+	            if (code.equalsIgnoreCase("Madame"))
+	            	return "MME";  
+	            else
+	            if (code.equalsIgnoreCase("Mademoiselle"))
+	            	return "MLLE";
+	            else
+	                if (code.equalsIgnoreCase("ND"))
+	                	return "Non disponible";        	
+	     	}
+	    	return null;
+	    }
+	    
+	    public static String sextotitlecode(String sex) {
+	    	if (sex == null || sex.trim().equalsIgnoreCase("")) 
+	    		return "ND";
+	    	else
+	    		if (sex.trim().equalsIgnoreCase("M")
+	    			|| sex.trim().equalsIgnoreCase("MASCULIN") )
+	    		return "M";
+	    	else
+	    		return "MME";
+	    }
+	       
+	    public static String get_clean_title_code(String code) {
+	    	if ((code == null) || (code.trim().equalsIgnoreCase("")))
+	    		return null;
+	    	else
+	    	{
+	        	code = code.trim();
+	        	if (code.equalsIgnoreCase("M.") || (code.equalsIgnoreCase("MR")) || (code.equalsIgnoreCase("M")))
+	                return "M";
+	            else
+	            if (code.equalsIgnoreCase("MME")|| (code.equalsIgnoreCase("ME")))
+	            	return "MME";  
+	            else
+	            if (code.equalsIgnoreCase("MLLE")|| (code.equalsIgnoreCase("ML")))
+	            	return "MLLE";
+	     	}
+	    	return null;
+	    }
+	    
+	    public static String titlecodetosex(String code) {
+	    	if ((code == null) || (code.trim().equalsIgnoreCase("")))
+	    		return null;
+	    	else
+	    	{
+	    		code = code.trim();	
+	    		if (code.equalsIgnoreCase("MR") || code.equalsIgnoreCase("M.") 
+	    				|| code.equalsIgnoreCase("M")
+	    				|| code.equalsIgnoreCase("MASCULIN") 
+	    				|| code.equalsIgnoreCase("HOMME")
+	    				|| code.equalsIgnoreCase("MONSIEUR"))
+	    			return "M";
+	        	else
+	    	    	return "F";
+	    	}
+	    }
+
+	    public static Integer sextotitleid(String sex) {
+	    	if (sex == null || sex.trim().equalsIgnoreCase("")) 
+	    		return null;
+	    	else
+	    		if (sex.trim().equalsIgnoreCase("M")
+	    			|| sex.trim().equalsIgnoreCase("MASCULIN") )
+	    		return 47096;
+	    	else
+	    		return 47098;
+	    }
+}

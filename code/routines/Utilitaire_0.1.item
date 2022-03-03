@@ -1,0 +1,269 @@
+package routines;
+
+public class Utilitaire {
+	private static String PrevGroupe;
+	private static Integer NoOrdre;
+	private static String PrevKey;
+	private static String PrevBloc;
+
+	public static String clean_NumTel(String Num) {
+       	if ((Num == null) || (Num.equalsIgnoreCase("")))
+    		return null;
+        else {
+        		Num = Num.replace("*", "");
+        		Num = Num.replace("/f", "");
+        		Num = Num.replace(")", "");        		
+        		Num = Num.replace(".", " ");
+        		Num = Num.replace(",", " ");
+        		Num = Num.replace("-", " ");
+        		Num = Num.replaceAll("[id ID Id LD Ld ld stEs (FS ec fp r e CC ma cfc GC /]", "");
+        		
+        		if ((Num == null) || (Num.equalsIgnoreCase("")))
+            		return null;
+        		else
+        		{
+	        		if (Num.length() == 9)
+	        			Num = "0" + Num;
+	        		if (Num.length() == 10) 
+	        		{   			
+	        			String Num1 = Num.subSequence(0, Num.length()-8) + " ";
+	        			String Num2 = Num.subSequence(2, Num.length()-6) + " ";
+	        			String Num3 = Num.subSequence(4, Num.length()-4) + " ";
+	        			String Num4 = Num.subSequence(6, Num.length()-2) + " ";
+	        			String Num5 = Num.subSequence(8, Num.length()) + "";
+	        			Num = Num1 + Num2 + Num3 + Num4 + Num5;
+	        		}
+	        		return Num;
+        		}  
+        	}       
+    }
+    
+    public static String Trim_Value(String Val) {
+       	if ((Val == null) || (Val.equalsIgnoreCase("")))
+    		return null;
+       	else       		    		      
+       		return Val.trim();
+    }
+
+    public static String clean_Value(String Val) {
+       	if ((Val == null) || (Val.equalsIgnoreCase("")))
+    		return null;
+       	else       		    
+       	{
+       		Val = Val.trim().replaceAll(" ", "");
+       		Val = Val.replaceAll("-", "");
+       		return Val;
+       	}	
+    }
+    
+    public static String Clean_Code(String Val) {
+       	if ((Val == null) || (Val.equalsIgnoreCase("")))
+    		return null;
+       	else  {       		    		      
+       		Val = Val.trim().toLowerCase();
+       		
+       		Val = Val.replaceAll(" : ", "_");
+       		Val = Val.replaceAll(":", "_");
+       		Val = Val.replaceAll(" - ", "_");
+       		Val = Val.replaceAll("-", "_");
+       		Val = Val.replaceAll("/", "_");
+       		Val = Val.replaceAll("[//(//)]", "_");  
+       		Val = Val.replaceAll(" , ", "_");
+       		Val = Val.replaceAll(", ", "_");
+       		Val = Val.replaceAll(",", "_"); 
+       		Val = Val.replaceAll("[/+]", "_");
+       		Val = Val.replaceAll("[/.]", "");
+       		Val = Val.replaceAll("[/*]", "_");
+       		Val = Val.replaceAll("[/°]", "_");
+       		
+       		Val = Val.replace(" ", "_");
+       		
+       		Val = ConvertUtils.remove_Accents(Val);
+                        
+       		Val = Val.toUpperCase();
+       		
+       		return Val;       			
+       		}         
+    }
+    
+
+    public static Integer getNoOrdre(String Groupe) {
+    	if ((Groupe == null) || (Groupe.trim().equalsIgnoreCase("")))
+    		return 0;
+    	else
+    	{
+    	    if (Groupe.equals(PrevGroupe)) 
+    			NoOrdre = NoOrdre + 1;
+    		else
+    			NoOrdre = 1;
+    	    
+    		PrevGroupe = Groupe;
+			return NoOrdre;    		
+    	}
+    }
+    
+    
+    public static String getDateHeure(String MyDate, String MyTime) {
+       	if ((MyDate == null))
+    		return null;
+       	else       
+       	{
+       		MyTime = MyTime.replaceAll("[/.]", ":").trim();
+       		if (MyTime.length() < 5)
+       		{
+       			String MyTime1;      			
+       			String MyTime2;      			
+       			
+       			MyTime1 = MyTime.substring(0, MyTime.indexOf(':'));
+       			MyTime2 = MyTime.substring(MyTime.indexOf(':'), MyTime.length());
+       			if (MyTime1.length() < 2)
+       				MyTime1 = "0" + MyTime1;
+       			if (MyTime2.length() < 3) //il y a les :
+       				MyTime2 = MyTime2 + "0";       		
+       			MyTime = MyTime1 +  MyTime2;
+       			MyDate = MyDate + " " + MyTime + ":00";       				
+       		}
+       		else
+       			MyDate = MyDate + " " + MyTime + ":00";
+       		return MyDate;
+       	}
+    }
+    
+    public static String bloc_Notes(String Key, String Val1, String Val2, String Val3)
+    {
+    	String RetourChariot = "#x0D0A;";
+    	String Val;
+    	if ((Val1 == null) || (Val1.trim().equalsIgnoreCase("")))
+    	{
+    		if ((Val2 == null) || (Val2.trim().equalsIgnoreCase("")))
+    		{
+    			if ((Val3 == null)|| (Val3.trim().equalsIgnoreCase("")))
+    				Val = ""; 
+    			else
+    				Val = Val3.trim();
+    		}
+    		else 
+    		{
+    			if ((Val3 == null) || (Val3.trim().equalsIgnoreCase("")))
+    				Val = Val2.trim();
+    			else
+    				Val =  Val2.trim() + RetourChariot + Val3.trim();    				
+    		}       		
+     	}
+    	else 
+    	{
+    		
+    		if ((Val2 == null) || (Val2.trim().equalsIgnoreCase("")))
+    		{
+    			if ((Val3 == null)|| (Val3.trim().equalsIgnoreCase("")))
+    				Val =  Val1.trim(); 
+    			else
+    				Val =  Val1.trim()+ RetourChariot + Val3.trim();
+    		}
+    		else 
+    		{
+    			if ((Val3 == null) || (Val3.trim().equalsIgnoreCase("")))
+    				Val =  Val1.trim() + RetourChariot + Val2.trim();
+    			else
+    				Val =  Val1.trim() + RetourChariot + Val2.trim() + RetourChariot + Val3.trim();    				
+    		}       		
+        }
+    	if (Key != null && (Key == PrevKey || Key.equalsIgnoreCase(PrevKey)))
+    		Val = PrevBloc + RetourChariot + Val;
+    	
+    	PrevBloc = Val;
+    	PrevKey = Key;
+    	
+    	return Val;
+    }
+    
+    public static Boolean getIsPortable(String NumTel) {
+       	if (NumTel == null)
+    		return false;
+       	else       
+       	{
+       		if (NumTel.length() > 1)
+       		{	
+	       		NumTel = NumTel.substring(0, 2);
+	       		if (NumTel.equalsIgnoreCase("06") || NumTel == "06")
+	       			return true;
+	       		else
+	       			return false;
+       		}
+       		else
+       			return false;
+       	}
+    }
+    
+    public static String getHeure(String MyTime) {
+       	if ((MyTime == null))
+    		return null;
+       	else       
+       	{      	
+       		String MyTime2;       		
+       		if (MyTime.contains(","))
+       			MyTime = MyTime.substring(0, MyTime.indexOf(",")-1) + ":" + MyTime.substring(MyTime.indexOf(",")+1, MyTime.length());       		
+       		else 
+       		{
+       			if (MyTime.contains("."))	
+       				MyTime = MyTime.substring(0, MyTime.indexOf(".")) + ":" + MyTime.substring(MyTime.indexOf(".")+1, MyTime.length());
+       			else
+       				MyTime = MyTime + ":00";       			
+       		}
+
+       		MyTime2 = MyTime.substring(MyTime.indexOf(":")+1, MyTime.length());
+       		if (MyTime2.length() < 2)
+       			MyTime = MyTime + "0";
+       		MyTime2 = MyTime.substring(0, MyTime.indexOf(":"));
+       		if (MyTime2.length() < 2)
+       			MyTime = "0" + MyTime;
+       			
+       	
+       		return MyTime;
+       	}
+    }
+    
+    public static String concatValuesWithSpace(String Val1, String Val2, String Val3)
+    {
+    	String RetourChariot = " ";
+    	String Val = null;
+    	if ((Val1 == null) || (Val1.trim().equalsIgnoreCase("")))
+    	{
+    		if ((Val2 == null) || (Val2.trim().equalsIgnoreCase("")))
+    		{
+    			if ((Val3 == null)|| (Val3.trim().equalsIgnoreCase("")))
+    				Val = null; 
+    			else
+    				Val = Val3.trim();
+    		}
+    		else 
+    		{
+    			if ((Val3 == null) || (Val3.trim().equalsIgnoreCase("")))
+    				Val = Val2.trim();
+    			else
+    				Val =  Val2.trim() + RetourChariot + Val3.trim();    				
+    		}       		
+     	}
+    	else 
+    	{
+    		
+    		if ((Val2 == null) || (Val2.trim().equalsIgnoreCase("")))
+    		{
+    			if ((Val3 == null)|| (Val3.trim().equalsIgnoreCase("")))
+    				Val =  Val1.trim(); 
+    			else
+    				Val =  Val1.trim()+ RetourChariot + Val3.trim();
+    		}
+    		else 
+    		{
+    			if ((Val3 == null) || (Val3.trim().equalsIgnoreCase("")))
+    				Val =  Val1.trim() + RetourChariot + Val2.trim();
+    			else
+    				Val =  Val1.trim() + RetourChariot + Val2.trim() + RetourChariot + Val3.trim();    				
+    		}       		
+        }
+    	
+    	return Val;
+    }       
+    
+}

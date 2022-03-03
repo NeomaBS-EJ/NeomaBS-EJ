@@ -1,0 +1,43 @@
+package routines;
+
+/*
+ * 
+ */
+public class RoutinesSynchroLDAP {
+	
+	public static boolean EN_EXECUTION = false;
+	public static StringBuffer REQUETES_SQL = new StringBuffer();
+	
+	/**
+	 * Regroupe les requêtes dans une seule chaine. Pour les exécuter
+	 * d'un seul coup.
+	 * @param requete
+	 */
+    public static void grouperRequetes(String requete) {
+    	REQUETES_SQL.append(requete + "\n");
+    }
+    
+    public static String getFormatUrlJDBC(boolean ssl) {
+    	if (ssl) {
+    		return "jdbc:postgresql://%s:%s/%s?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory";
+    	}
+    	else {
+    		return "jdbc:postgresql://%s:%s/%s";
+    	}
+    }
+    
+    public static String PremierMail(String mail) {
+    	String val = Utilitaires.Trim_Value(mail);
+       	if (val == null)
+    		return null;
+       	else       
+       	{
+       		int position = val.indexOf(",");
+       		if (position > 0) 
+       			return val.substring(0, position);
+       		else
+       			return val;       		
+       	}
+    }
+
+}

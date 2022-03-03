@@ -1,0 +1,27 @@
+package routines;
+
+/*
+ */
+public class RoutinesImport {
+	
+	public static boolean EN_EXECUTION = false;
+	public static String MDP_PG = "gf12zrdcfe5";
+	public static String USER_PG = "auriga_root";
+	
+    public static String getFormatUrlJDBC(boolean ssl) {
+    	if (ssl) {
+    		return "jdbc:postgresql://%s:%s/%s?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory";
+    	}
+    	else {
+    		return "jdbc:postgresql://%s:%s/%s";
+    	}
+    } 
+ 
+    public static boolean ConnexionPG(String USER, String AMDP){
+    	if (AMDP != null)
+    		MDP_PG = AMDP;
+    	if (USER != null)
+    		USER_PG = USER;
+    	return true;
+    } 
+}

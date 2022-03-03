@@ -1,0 +1,10 @@
+package routines;
+
+/*
+ * Les routines communes aux ETL Aurion
+ */
+public class EtlAurion {
+	
+	public static boolean EN_EXECUTION = false;
+	
+}
