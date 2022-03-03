@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_ZQiocXd0EeukC8GVZMxAMQ" confirmationNeeded="false" name="Dev">
+    <contextParameter xmi:id="_TpLFYHd2EeukC8GVZMxAMQ" comment="" name="repertoire_aurion" prompt="repertoire_aurion?" promptNeeded="false" type="id_String" value="C:/WorkspaceInterface"/>
+    <contextParameter xmi:id="_TpLFYXd2EeukC8GVZMxAMQ" comment="" name="routeur_serveur" prompt="routeur_serveur?" promptNeeded="false" type="id_String" value="rs01vs-aurdbt"/>
+    <contextParameter xmi:id="_TpLFYnd2EeukC8GVZMxAMQ" comment="" name="routeur_port" prompt="routeur_port?" promptNeeded="false" type="id_Integer" value="443"/>
+    <contextParameter xmi:id="_TpLFY3d2EeukC8GVZMxAMQ" comment="" name="routeur_ssl" prompt="routeur_ssl?" promptNeeded="false" type="id_Boolean" value="false"/>
+    <contextParameter xmi:id="_TpLFZHd2EeukC8GVZMxAMQ" comment="" name="postgre_base" prompt="postgre_base?" promptNeeded="false" type="id_String" value="neoma_prod"/>
+    <contextParameter xmi:id="_TpLFZXd2EeukC8GVZMxAMQ" comment="" name="repertoire_fichier_source" prompt="repertoire_fichier_source?" promptNeeded="false" type="id_String" value="/interfaces/imports/parcoursup"/>
+    <contextParameter xmi:id="_TpLFZnd2EeukC8GVZMxAMQ" comment="" name="repertoire_archive" prompt="repertoire_archive?" promptNeeded="false" type="id_String" value="/interfaces/archives/parcoursup"/>
+    <contextParameter xmi:id="_TpLFZ3d2EeukC8GVZMxAMQ" comment="" name="objet_id_statutinscription_initial" prompt="objet_id_statutinscription_initial?" promptNeeded="false" type="id_Integer" value="2206249"/>
+    <contextParameter xmi:id="_LoBOkIGLEeuoQbWTBROLRg" comment="" name="repertoire_referentiel" prompt="repertoire_referentiel?" promptNeeded="false" type="id_String" value="/Tables_references"/>
+    <contextParameter xmi:id="_UmgpgIyBEeu03bNexYxA0w" comment="" name="objet_id_ville_etrangere" prompt="objet_id_ville_etrangere?" promptNeeded="false" type="id_Integer" value="670072"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_l9f6QIGbEeumKqAUdaiM2w" confirmationNeeded="false" name="Preprod">
+    <contextParameter xmi:id="_l9f6QYGbEeumKqAUdaiM2w" comment="" name="repertoire_aurion" prompt="repertoire_aurion?" promptNeeded="false" type="id_String" value="/opt/auriga/aurion"/>
+    <contextParameter xmi:id="_l9f6QoGbEeumKqAUdaiM2w" comment="" name="routeur_serveur" prompt="routeur_serveur?" promptNeeded="false" type="id_String" value="rs01vs-aurdbt"/>
+    <contextParameter xmi:id="_l9f6Q4GbEeumKqAUdaiM2w" comment="" name="routeur_port" prompt="routeur_port?" promptNeeded="false" type="id_Integer" value="443"/>
+    <contextParameter xmi:id="_l9f6RIGbEeumKqAUdaiM2w" comment="" name="routeur_ssl" prompt="routeur_ssl?" promptNeeded="false" type="id_Boolean" value="true"/>
+    <contextParameter xmi:id="_l9f6RYGbEeumKqAUdaiM2w" comment="" name="postgre_base" prompt="postgre_base?" promptNeeded="false" type="id_String" value="neoma_preprod"/>
+    <contextParameter xmi:id="_l9f6RoGbEeumKqAUdaiM2w" comment="" name="repertoire_fichier_source" prompt="repertoire_fichier_source?" promptNeeded="false" type="id_String" value="/interfaces/imports/parcoursup"/>
+    <contextParameter xmi:id="_l9f6R4GbEeumKqAUdaiM2w" comment="" name="repertoire_archive" prompt="repertoire_archive?" promptNeeded="false" type="id_String" value="/interfaces/archives/parcoursup"/>
+    <contextParameter xmi:id="_l9f6SIGbEeumKqAUdaiM2w" comment="" name="objet_id_statutinscription_initial" prompt="objet_id_statutinscription_initial?" promptNeeded="false" type="id_Integer" value="2206249"/>
+    <contextParameter xmi:id="_l9f6SYGbEeumKqAUdaiM2w" comment="" name="repertoire_referentiel" prompt="repertoire_referentiel?" promptNeeded="false" type="id_String" value="/Tables_references"/>
+    <contextParameter xmi:id="_UmgpgYyBEeu03bNexYxA0w" comment="" name="objet_id_ville_etrangere" prompt="objet_id_ville_etrangere?" promptNeeded="false" type="id_Integer" value="670072"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_ZQiocnd0EeukC8GVZMxAMQ" confirmationNeeded="false" name="Prod">
+    <contextParameter xmi:id="_TpLFaHd2EeukC8GVZMxAMQ" comment="" name="repertoire_aurion" prompt="repertoire_aurion?" promptNeeded="false" type="id_String" value="/opt/auriga/aurion"/>
+    <contextParameter xmi:id="_TpLFaXd2EeukC8GVZMxAMQ" comment="" name="routeur_serveur" prompt="routeur_serveur?" promptNeeded="false" type="id_String" value="routeuraurion.neoma-bs.fr"/>
+    <contextParameter xmi:id="_TpLFand2EeukC8GVZMxAMQ" comment="" name="routeur_port" prompt="routeur_port?" promptNeeded="false" type="id_Integer" value="443"/>
+    <contextParameter xmi:id="_TpLFa3d2EeukC8GVZMxAMQ" comment="" name="routeur_ssl" prompt="routeur_ssl?" promptNeeded="false" type="id_Boolean" value="true"/>
+    <contextParameter xmi:id="_TpLFbHd2EeukC8GVZMxAMQ" comment="" name="postgre_base" prompt="postgre_base?" promptNeeded="false" type="id_String" value="neoma_prod"/>
+    <contextParameter xmi:id="_TpLFbXd2EeukC8GVZMxAMQ" comment="" name="repertoire_fichier_source" prompt="repertoire_fichier_source?" promptNeeded="false" type="id_String" value="/interfaces/imports/parcoursup"/>
+    <contextParameter xmi:id="_TpLFbnd2EeukC8GVZMxAMQ" comment="" name="repertoire_archive" prompt="repertoire_archive?" promptNeeded="false" type="id_String" value="/interfaces/archives/parcoursup"/>
+    <contextParameter xmi:id="_TpLFb3d2EeukC8GVZMxAMQ" comment="" name="objet_id_statutinscription_initial" prompt="objet_id_statutinscription_initial?" promptNeeded="false" type="id_Integer" value="2206249"/>
+    <contextParameter xmi:id="_LoBOkYGLEeuoQbWTBROLRg" comment="" name="repertoire_referentiel" prompt="repertoire_referentiel?" promptNeeded="false" type="id_String" value="/Tables_references"/>
+    <contextParameter xmi:id="_UmgpgoyBEeu03bNexYxA0w" comment="" name="objet_id_ville_etrangere" prompt="objet_id_ville_etrangere?" promptNeeded="false" type="id_Integer" value="670072"/>
+  </talendfile:ContextType>
+</xmi:XMI>

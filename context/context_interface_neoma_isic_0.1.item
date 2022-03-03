@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_Ye0_UBRmEeu65M2H9-zsQA" confirmationNeeded="false" name="Dev">
+    <contextParameter xmi:id="_Ye0_URRmEeu65M2H9-zsQA" comment="" name="repertoire_aurion" prompt="repertoire_aurion?" promptNeeded="false" type="id_String" value="C:/Program Files (x86)/Auriga/Aurion"/>
+    <contextParameter xmi:id="_Ye0_UhRmEeu65M2H9-zsQA" comment="" name="routeur_serveur" prompt="routeur_serveur?" promptNeeded="false" type="id_String" value="PBL-AC"/>
+    <contextParameter xmi:id="_Ye0_UxRmEeu65M2H9-zsQA" comment="" name="routeur_port" prompt="routeur_port?" promptNeeded="false" type="id_Integer" value="5680"/>
+    <contextParameter xmi:id="_Ye0_VBRmEeu65M2H9-zsQA" comment="" name="routeur_ssl" prompt="routeur_ssl?" promptNeeded="false" type="id_Boolean" value="false"/>
+    <contextParameter xmi:id="_Ye0_VRRmEeu65M2H9-zsQA" comment="" name="postgre_base" prompt="postgre_base?" promptNeeded="false" type="id_String" value="neoma_220620"/>
+    <contextParameter xmi:id="_Ye0_VhRmEeu65M2H9-zsQA" comment="" name="repertoire_fichier_source" prompt="repertoire_fichier_source?" promptNeeded="false" type="id_String" value="C:/Users/chaimaa/Desktop/NEOMA/fichiers_sources/"/>
+    <contextParameter xmi:id="_Ye0_VxRmEeu65M2H9-zsQA" comment="" name="repertoire_archive" prompt="repertoire_archive?" promptNeeded="false" type="id_String" value="C:/Users/chaimaa/Desktop/NEOMA/archives/"/>
+    <contextParameter xmi:id="_Ye0_WBRmEeu65M2H9-zsQA" comment="" name="objet_id_statutdemandeisic" prompt="objet_id_statutdemandeisic?" promptNeeded="false" type="id_String" value="46687"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_Ye0_WRRmEeu65M2H9-zsQA" confirmationNeeded="false" name="Prod">
+    <contextParameter xmi:id="_Ye0_WhRmEeu65M2H9-zsQA" comment="" name="repertoire_aurion" prompt="repertoire_aurion?" promptNeeded="false" type="id_String" value="&quot;C:/Program Files (x86)/Auriga/Aurion&quot;"/>
+    <contextParameter xmi:id="_Ye0_WxRmEeu65M2H9-zsQA" comment="" name="routeur_serveur" prompt="routeur_serveur?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_Ye0_XBRmEeu65M2H9-zsQA" comment="" name="routeur_port" prompt="routeur_port?" promptNeeded="false" type="id_Integer" value=""/>
+    <contextParameter xmi:id="_Ye0_XRRmEeu65M2H9-zsQA" comment="" name="routeur_ssl" prompt="routeur_ssl?" promptNeeded="false" type="id_Boolean" value="true"/>
+    <contextParameter xmi:id="_Ye0_XhRmEeu65M2H9-zsQA" comment="" name="postgre_base" prompt="postgre_base?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_Ye0_XxRmEeu65M2H9-zsQA" comment="" name="repertoire_fichier_source" prompt="repertoire_fichier_source?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_Ye0_YBRmEeu65M2H9-zsQA" comment="" name="repertoire_archive" prompt="repertoire_archive?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_Ye0_YRRmEeu65M2H9-zsQA" comment="" name="objet_id_statutdemandeisic" prompt="objet_id_statutdemandeisic?" promptNeeded="false" type="id_String" value=""/>
+  </talendfile:ContextType>
+</xmi:XMI>
