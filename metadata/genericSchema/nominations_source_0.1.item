@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010">
+  <TalendMetadata:GenericSchemaConnection xmi:id="_1T_9QbI6EeuSmde-6o9_lQ" dataPackage="_1T_9QrI6EeuSmde-6o9_lQ"/>
+  <TalendMetadata:GenericPackage xmi:id="_1T_9QrI6EeuSmde-6o9_lQ" dataManager="_1T_9QbI6EeuSmde-6o9_lQ">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_1T_9Q7I6EeuSmde-6o9_lQ" id="_1T_WMLI6EeuSmde-6o9_lQ" label="metedata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_1T_9RLI6EeuSmde-6o9_lQ" name="GroupeAdministratif" label="GroupeAdministratif" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_1UAkULI6EeuSmde-6o9_lQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_1UAkUbI6EeuSmde-6o9_lQ" name="Nom" label="Nom" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_1UAkUrI6EeuSmde-6o9_lQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_1UAkU7I6EeuSmde-6o9_lQ" name="Prenom" label="Prenom" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_1UAkVLI6EeuSmde-6o9_lQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_1UAkVbI6EeuSmde-6o9_lQ" name="Titre" label="Titre" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_1UAkVrI6EeuSmde-6o9_lQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_1UAkV7I6EeuSmde-6o9_lQ" name="DateNaissance" label="DateNaissance" length="-1" talendType="id_Date" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_1UAkWLI6EeuSmde-6o9_lQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_1UAkWbI6EeuSmde-6o9_lQ" name="Mail" label="Mail" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_1UAkWrI6EeuSmde-6o9_lQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_1UAkW7I6EeuSmde-6o9_lQ" name="ExonereFS" label="ExonereFS" length="-1" talendType="id_Character" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_1UAkXLI6EeuSmde-6o9_lQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_1UAkXbI6EeuSmde-6o9_lQ" name="ModaliteInscription" label="ModaliteInscription" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_1UAkXrI6EeuSmde-6o9_lQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_1UAkX7I6EeuSmde-6o9_lQ" name="ModeAdmission" label="ModeAdmission" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_1UAkYLI6EeuSmde-6o9_lQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_1UAkYbI6EeuSmde-6o9_lQ" name="PasCVEC" label="PasCVEC" length="-1" talendType="id_Character" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_1UAkYrI6EeuSmde-6o9_lQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_1UAkY7I6EeuSmde-6o9_lQ" name="PaysDeNaissance" label="PaysDeNaissance" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_1UAkZLI6EeuSmde-6o9_lQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_1UAkZbI6EeuSmde-6o9_lQ" name="Nationalite1" label="Nationalite1" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_1UAkZrI6EeuSmde-6o9_lQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_1UAkZ7I6EeuSmde-6o9_lQ" name="Nationalite2" label="Nationalite2" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_1UAkaLI6EeuSmde-6o9_lQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_1UAkabI6EeuSmde-6o9_lQ" name="Etat_de_paiement_de_l_acompte" label="Etat_de_paiement_de_l_acompte" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_1UAkarI6EeuSmde-6o9_lQ"/>
+      </feature>
+    </ownedElement>
+  </TalendMetadata:GenericPackage>
+</xmi:XMI>

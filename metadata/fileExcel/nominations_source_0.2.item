@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:FileExcelConnection xmi:id="_OnpREFZMEeua7JMCudDpxQ" name="nominations_source" dataPackage="_Onp4IFZMEeua7JMCudDpxQ _zHamYLI5EeuSmde-6o9_lQ _BcFwcLI7EeuSmde-6o9_lQ" Server="Localhost 127.0.0.1" FilePath="C:/WorkspaceInterface/InterfaceNominations/fichiers_sources/IntegrationNominations_11052021.xlsx" Encoding="ISO-8859-1" UseHeader="true" HeaderValue="1" FooterValue="0" LimitValue="" FirstLineCaption="true" SheetName="Integration" firstColumn="1" lastColumn="" thousandSeparator="," decimalSeparator="." selectAllSheets="true" sheetList="Integration:w&#xA;">
+    <sheetColumns>A</sheetColumns>
+    <sheetColumns>B</sheetColumns>
+    <sheetColumns>C</sheetColumns>
+    <sheetColumns>D</sheetColumns>
+    <sheetColumns>E</sheetColumns>
+    <sheetColumns>F</sheetColumns>
+    <sheetColumns>G</sheetColumns>
+    <sheetColumns>H</sheetColumns>
+    <sheetColumns>I</sheetColumns>
+    <sheetColumns>J</sheetColumns>
+    <sheetColumns>K</sheetColumns>
+    <sheetColumns>L</sheetColumns>
+    <sheetColumns>M</sheetColumns>
+    <sheetColumns>N</sheetColumns>
+  </TalendMetadata:FileExcelConnection>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_Onp4IFZMEeua7JMCudDpxQ" name="default" dataManager="_OnpREFZMEeua7JMCudDpxQ"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_zHamYLI5EeuSmde-6o9_lQ" name="default" dataManager="_OnpREFZMEeua7JMCudDpxQ"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_BcFwcLI7EeuSmde-6o9_lQ" name="default" dataManager="_OnpREFZMEeua7JMCudDpxQ">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_BcFwcbI7EeuSmde-6o9_lQ" properties="deleted&#xA;&#xA;true&#xA;&#xA;" id="_5dVKILI6EeuSmde-6o9_lQ" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_BcFwcrI7EeuSmde-6o9_lQ" label="GroupeAdministratif" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_BcFwc7I7EeuSmde-6o9_lQ" label="Nom" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_BcFwdLI7EeuSmde-6o9_lQ" label="Prenom" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_BcFwdbI7EeuSmde-6o9_lQ" label="Titre" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_BcFwdrI7EeuSmde-6o9_lQ" label="DateNaissance" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_BcFwd7I7EeuSmde-6o9_lQ" label="Mail" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_BcFweLI7EeuSmde-6o9_lQ" label="ExonereFS" length="-1" talendType="id_Character" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_BcFwebI7EeuSmde-6o9_lQ" label="ModaliteInscription" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_BcFwerI7EeuSmde-6o9_lQ" label="ModeAdmission" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_BcFwe7I7EeuSmde-6o9_lQ" label="PasCVEC" length="-1" talendType="id_Character" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_BcFwfLI7EeuSmde-6o9_lQ" label="PaysDeNaissance" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_BcFwfbI7EeuSmde-6o9_lQ" label="Nationalite1" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_BcFwfrI7EeuSmde-6o9_lQ" label="Nationalite2" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_BcFwf7I7EeuSmde-6o9_lQ" label="Etat_de_paiement_de_l_acompte" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

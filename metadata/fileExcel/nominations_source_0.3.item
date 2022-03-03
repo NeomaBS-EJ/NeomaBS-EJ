@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:FileExcelConnection xmi:id="_OnpREFZMEeua7JMCudDpxQ" name="nominations_source" dataPackage="_Onp4IFZMEeua7JMCudDpxQ _zHamYLI5EeuSmde-6o9_lQ _BcFwcLI7EeuSmde-6o9_lQ _A-D7MLI8EeuSmde-6o9_lQ" Server="Localhost 127.0.0.1" FilePath="C:/WorkspaceInterface/InterfaceNominations/fichiers_sources/IntegrationNominations_V3.xlsx" Encoding="ISO-8859-1" UseHeader="true" HeaderValue="1" FooterValue="0" LimitValue="" FirstLineCaption="true" SheetName="Integration" firstColumn="1" lastColumn="" thousandSeparator="," decimalSeparator="." selectAllSheets="true" sheetList="Integration:w&#xA;">
+    <sheetColumns>A</sheetColumns>
+    <sheetColumns>B</sheetColumns>
+    <sheetColumns>C</sheetColumns>
+    <sheetColumns>D</sheetColumns>
+    <sheetColumns>E</sheetColumns>
+    <sheetColumns>F</sheetColumns>
+    <sheetColumns>G</sheetColumns>
+    <sheetColumns>H</sheetColumns>
+    <sheetColumns>I</sheetColumns>
+    <sheetColumns>J</sheetColumns>
+    <sheetColumns>K</sheetColumns>
+    <sheetColumns>L</sheetColumns>
+    <sheetColumns>M</sheetColumns>
+    <sheetColumns>N</sheetColumns>
+    <sheetColumns>O</sheetColumns>
+  </TalendMetadata:FileExcelConnection>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_Onp4IFZMEeua7JMCudDpxQ" name="default" dataManager="_OnpREFZMEeua7JMCudDpxQ"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_zHamYLI5EeuSmde-6o9_lQ" name="default" dataManager="_OnpREFZMEeua7JMCudDpxQ"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_BcFwcLI7EeuSmde-6o9_lQ" name="default" dataManager="_OnpREFZMEeua7JMCudDpxQ"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_A-D7MLI8EeuSmde-6o9_lQ" name="default" dataManager="_OnpREFZMEeua7JMCudDpxQ"/>
+</xmi:XMI>
