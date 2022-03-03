@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:DelimitedFileConnection xmi:id="_G4TEoGN5EeqjNvDL-_azTg" name="Ref_Pays_Aurion" dataPackage="_G4TEoWN5EeqjNvDL-_azTg" Server="Localhost 127.0.0.1" FilePath="C:/Users/emmanuel.julien/Desktop/Aurion/Talend/Référentiels/Pays_Aurion.csv" Format="WINDOWS" Encoding="ISO-8859-1" FieldSeparatorValue="&quot;;&quot;" RowSeparatorValue="&quot;\n&quot;" UseHeader="true" HeaderValue="1" FirstLineCaption="true"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_G4TEoWN5EeqjNvDL-_azTg" name="default" dataManager="_G4TEoGN5EeqjNvDL-_azTg">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_G4TEomN5EeqjNvDL-_azTg" id="__YGpoGN4EeqjNvDL-_azTg" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_G4TEo2N5EeqjNvDL-_azTg" label="id_Pays" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_G4TEpGN5EeqjNvDL-_azTg" label="Code_Pays" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_G4TEpWN5EeqjNvDL-_azTg" label="Code_ISO_Pays" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_G4TEpmN5EeqjNvDL-_azTg" label="Libelle_Pays" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

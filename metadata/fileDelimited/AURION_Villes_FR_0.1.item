@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:DelimitedFileConnection xmi:id="_mFBqoJFqEeuDjpIl3cgZTg" name="AURION_Villes_FR" dataPackage="_mFBqoZFqEeuDjpIl3cgZTg" Server="Localhost 127.0.0.1" FilePath="C:/WorkspaceInterface/Tables_references/AURION_Villes_FR.csv" Encoding="ISO-8859-1" FieldSeparatorValue="&quot;;&quot;" RowSeparatorValue="&quot;\n&quot;" UseHeader="true" HeaderValue="1" FirstLineCaption="true"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_mFBqoZFqEeuDjpIl3cgZTg" name="default" dataManager="_mFBqoJFqEeuDjpIl3cgZTg">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_mFBqopFqEeuDjpIl3cgZTg" id="_bmRz0JFqEeuDjpIl3cgZTg" label="ref_villes_fr">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_mFBqo5FqEeuDjpIl3cgZTg" label="id" length="-1" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_mFBqpJFqEeuDjpIl3cgZTg" label="code" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_mFBqpZFqEeuDjpIl3cgZTg" label="libelle" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_mFBqppFqEeuDjpIl3cgZTg" label="departement" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

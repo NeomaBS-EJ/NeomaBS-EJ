@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:DelimitedFileConnection xmi:id="_5LPIALJPEeuJgp9MLvCDmw" name="AURION_Etat_Paiement_Acompte" dataPackage="_5LPIAbJPEeuJgp9MLvCDmw" Server="Localhost 127.0.0.1" FilePath="C:/WorkspaceInterface/Tables_references/AURION_Etat_Paiement_Acompte.csv" Encoding="UTF-8" FieldSeparatorValue="&quot;;&quot;" RowSeparatorValue="&quot;\n&quot;" UseHeader="true" HeaderValue="1" FirstLineCaption="true"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_5LPIAbJPEeuJgp9MLvCDmw" name="default" dataManager="_5LPIALJPEeuJgp9MLvCDmw">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_5LPIArJPEeuJgp9MLvCDmw" id="_q89rcLJPEeuJgp9MLvCDmw" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_5LPIA7JPEeuJgp9MLvCDmw" label="id" length="-1" talendType="id_Integer" key="true" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_5LPIBLJPEeuJgp9MLvCDmw" label="code" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_5LPIBbJPEeuJgp9MLvCDmw" label="libelle" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:DelimitedFileConnection xmi:id="_CSXDQIyuEeu03bNexYxA0w" name="AURION_Modalites_Inscription" dataPackage="_CSXDQYyuEeu03bNexYxA0w" Server="Localhost 127.0.0.1" FilePath="C:/WorkspaceInterface/Tables_references/AURION_Modalites_Inscription.csv" Encoding="ISO-8859-1" FieldSeparatorValue="&quot;;&quot;" RowSeparatorValue="&quot;\n&quot;" UseHeader="true" HeaderValue="1" FirstLineCaption="true"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_CSXDQYyuEeu03bNexYxA0w" name="default" dataManager="_CSXDQIyuEeu03bNexYxA0w">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_CSXDQoyuEeu03bNexYxA0w" id="_yXErQIytEeu03bNexYxA0w" label="AURION_Modalites_Inscription">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_CSXDQ4yuEeu03bNexYxA0w" label="id" length="7" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_CSXDRIyuEeu03bNexYxA0w" label="code" length="21" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_CSXDRYyuEeu03bNexYxA0w" label="libelle" length="31" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>
